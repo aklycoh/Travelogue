@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>三程游记 · 川渝 · 滇行 · 江南早春</title>
+<style>
+  :root{
+    --ink:#1a1a1a; --paper:#f6f3ec; --rule:#cfc8b8; --muted:#7a7368;
+    --accent:#9a3a2a; --shadow:0 18px 40px -18px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);
+    font-family:"Noto Serif SC","Source Han Serif SC","Songti SC",Georgia,serif;
+    -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:980px;margin:0 auto;padding:0 22px;}
+  /* Cover */
+  header.cover{padding:18vh 0 14vh;text-align:center;border-bottom:1px solid var(--rule)}
+  header.cover .eyebrow{font-size:13px;letter-spacing:.4em;color:var(--muted);text-transform:uppercase}
+  header.cover h1{font-size:clamp(40px,7vw,84px);font-weight:600;letter-spacing:.06em;margin:.4em 0 .2em;line-height:1.1}
+  header.cover h1 small{display:block;font-size:.34em;letter-spacing:.5em;color:var(--accent);font-weight:400;margin-top:1em}
+  header.cover p.lede{max-width:560px;margin:1.6em auto 0;color:var(--muted);font-size:15px;line-height:1.9}
+  /* Trip section */
+  section.trip{padding:90px 0 40px;border-bottom:1px solid var(--rule)}
+  .trip-head{display:flex;align-items:baseline;gap:18px;margin-bottom:8px;flex-wrap:wrap}
+  .trip-head .num{font-family:"Bodoni 72",Didot,Georgia,serif;font-size:64px;color:var(--accent);font-style:italic;line-height:1}
+  .trip-head h2{font-size:30px;margin:0;letter-spacing:.08em;font-weight:600}
+  .trip-meta{color:var(--muted);font-size:13px;letter-spacing:.2em;margin:6px 0 28px;border-top:1px dashed var(--rule);border-bottom:1px dashed var(--rule);padding:8px 0}
+  .intro{font-size:17px;line-height:2;color:#2a2620;margin:0 0 50px;max-width:680px}
+  .intro::first-letter{font-size:2.6em;float:left;line-height:.95;padding:6px 10px 0 0;color:var(--accent);font-weight:600}
+  /* Day */
+  .day{margin:60px 0}
+  .day-head{display:flex;align-items:center;gap:14px;margin:0 0 18px}
+  .day-head .dot{width:10px;height:10px;background:var(--accent);border-radius:50%}
+  .day-head h3{font-size:18px;margin:0;letter-spacing:.18em;font-weight:600}
+  .day-head .date{color:var(--muted);font-size:12px;letter-spacing:.2em;margin-left:auto;font-family:Georgia,serif;font-style:italic}
+  .day p{font-size:16px;line-height:2;margin:0 0 22px;color:#2a2620}
+  /* Image grid */
+  .grid{display:grid;gap:14px;margin:18px 0 30px}
+  .g1{grid-template-columns:1fr}
+  .g2{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .grid figure{margin:0;position:relative;cursor:zoom-in;background:#ddd;overflow:hidden;border-radius:2px;box-shadow:var(--shadow)}
+  .grid figure img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s ease;aspect-ratio:4/5}
+  .grid figure.wide img{aspect-ratio:3/2}
+  .grid figure.tall img{aspect-ratio:3/4}
+  .grid figure:hover img{transform:scale(1.03)}
+  .grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;font-size:12px;color:#fff;
+    background:linear-gradient(to top,rgba(0,0,0,.65),transparent);letter-spacing:.05em}
+  /* Lightbox */
+  .lb{position:fixed;inset:0;background:rgba(15,12,10,.94);display:none;align-items:center;justify-content:center;z-index:99;padding:24px;cursor:zoom-out}
+  .lb.on{display:flex}
+  .lb img{max-width:96vw;max-height:92vh;box-shadow:0 30px 80px -20px rgba(0,0,0,.7)}
+  .lb .cap{position:fixed;bottom:18px;left:0;right:0;text-align:center;color:#ddd;font-size:13px;letter-spacing:.1em}
+  /* Footer */
+  footer{padding:60px 0 80px;text-align:center;color:var(--muted);font-size:13px;letter-spacing:.2em}
+  footer .seal{display:inline-block;border:1.5px solid var(--accent);color:var(--accent);padding:10px 18px;letter-spacing:.4em;margin-bottom:16px;font-size:12px}
+  /* Pull quote */
+  .pull{font-size:22px;line-height:1.9;color:var(--accent);font-style:italic;text-align:center;margin:50px auto;max-width:600px;padding:24px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  @media (max-width:640px){
+    .g3{grid-template-columns:1fr 1fr}
+    .trip-head .num{font-size:48px}
+    header.cover{padding:14vh 0 10vh}
+  }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="wrap">
+    <div class="eyebrow">A Photo Diary · 2023 — 2026</div>
+    <h1>三 程<small>CHENGDU · YUNNAN · JIANGNAN</small></h1>
+    <p class="lede">三段不连贯的旅行，被相机记得清清楚楚——岷江的水声、洱海的风、园林里早开的一枝梅。从川渝到滇南，再回到江南早春，三十九张底片，按时间一一摊开。</p>
+  </div>
+</header>
+
+<section class="trip">
+  <div class="wrap">
+    <div class="trip-head">
+      <div class="num">I</div>
+      <h2>川 渝 七 日</h2>
+    </div>
+    <div class="trip-meta">2023.10.13 — 2023.10.19 · 成都 · 都江堰 · 乐山 · 峨眉山 · 重庆</div>
+    <p class="intro">十月的盆地刚转凉，雾比阳光来得勤。从成都的早班地铁出发，往北看了一眼岷江如何被分流两千年，又往南去碰了乐山大佛濡湿的脚趾，最后落在长江与嘉陵江的交汇处，看洪崖洞把整座江岸点成蜂蜜色。</p>
+
+    <div class="day">
+      <div class="day-head"><div class="dot"></div><h3>DAY 1 · 成都 · 红油与诗碑</h3><div class="date">Oct 13, 2023</div></div>
+      <p>清晨六点四十四的地铁车厢里，灯光是冷的，两个人都还没醒透。一碗红油肥肠抄手把胃唤了过来——香菜浮在辣油上，肥肠炖得糯软，咬下去满嘴卤香。上午穿过青羊宫一带，杜甫草堂里那块"八月秋高风怒号"的诗碑立在竹影里，被秋天的湿气浸得发暗，比想象中要小，也比想象中要沉。中午在天府广场附近随便寻了家小馆，下午散步去了浣花溪。夜里钻进巷子，蛋烘糕的铁锅滋滋响，冰粉摊前一家三口排着队，那种成都的"巴适"，是要等天黑了才慢慢冒出来的。</p>
+      <div class="grid g3">
+        <figure><img loading="lazy" data-full="images/full/IMG_5271.jpg" src="images/thumb/IMG_5271.jpg" alt=""><figcaption>06:44 · 早班地铁</figcaption></figure>
+        <figure><img loading="lazy" data-full="images/full/IMG_5274.jpg" src="images/thumb/IMG_5274.jpg" alt=""><figcaption>红油肥肠抄手</figcaption></figure>
+        <figure><img loading="lazy" data-full="images/full/IMG_5283.jpg" src="images/thumb/IMG_5283.jpg" alt=""><figcaption>青羊区街巷</figcaption></figure>
+        <figure><img loading="lazy" data-full="images/full/IMG_5291.jpg" src="images/thumb/IMG_5291.jpg" alt=""><figcaption>天府广场</figcaption></figure>
+        <figure><img loading="lazy" data-full="images/full/IMG_5292.jpg" src="images/thumb/IMG_5292.jpg" alt=""><figcaption>正午</figcaption></figure>
+        <figure><img loading="lazy" data-full="images/full/IMG_5295.jpg" src="images/thumb/IMG_5295.jpg" alt=""><figcaption>杜甫草堂 · 茅屋为秋风所破歌</figcaption></figure>
+      </div>
+      <div class="grid g1">
+        <figure class="wide"><img loading="lazy" data-full="images/full/IMG_5301.jpg" src="images/thumb/IMG_5301.jpg" alt=""><figcaption>夜市 · 冰粉与蛋烘糕</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-head"><div class="dot"></div><h3>DAY 2 · 成都北郊</h3><div class="date">Oct 14, 2023</div></div>
+      <p>第二天是缓慢的一天，往城北去走亲戚或者闲转，没有刻意的目的地。这种"什么都没做"的一天，往往是最像生活的旅行。</p>
+      <div class="grid g2">
+        <figure class="wide"><img loading="lazy" data-full="images/full/IMG_5321.jpg" src="images/thumb/IMG_5321.jpg" alt=""><figcaption>10:35</figcaption></figure>
+        <figure class="wide"><img loading="lazy" data-full="images/full/IMG_5323.jpg" src="images/thumb/IMG_5323.jpg" alt=""><figcaption>10:58</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-head"><div class="dot"></div><h3>DAY 3 · 都江堰 · 看了两千年的水</h3><div class="date">Oct 15, 2023</div></div>
+      <p>去都江堰那天天阴，岷江反倒因此显出更深的青。鱼嘴把江水劈成两半，一半内江一半外江，李冰留下的活计还在工作。栈道上人不多，水声很大，把说话声盖住了。下午继续往青城方向走了走，山色已是秋意。</p>
+      <div class="grid g1">
+        <figure class="wide"><img loading="lazy" data-full="images/full/IMG_5333.jpg" src="images/thumb/IMG_5333.jpg" alt=""><figcaption>都江堰 · 岷江</figcaption></figure>
+      </div>
+      <div class="grid g2">
+        <figure><img loading="lazy" data-full="images/full/IMG_5346.jpg" src="images/thumb/IMG_5346.jpg" alt=""><figcaption>水利工程旁</figcaption></figure>
+        <figure><img loading="lazy" data-full="images/full/IMG_5351.jpg" src="images/thumb/IMG_5351.jpg" alt=""><figcaption>青城方向</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-head"><div class="dot"></div><h3>DAY 4 · 乐山大佛</h3><div class="date">Oct 16, 2023</div></div>
+      <p>乘船看大佛，比从顶上俯视更动人——你只能仰头，仰到脖子酸，才能勉强对得上他的视线。佛脚下是修缮工事的脚手架，绿色防护网包了大半身，像替这位坐了一千三百年的人披了一件雨衣。江水浑黄，船过留浪。</p>
+      <div class="grid g1">
+        <figure class="wide"><img loading="lazy" data-full="images/full/IMG_5367.jpg" src="images/thumb/IMG_5367.jpg" alt=""><figcaption>乐山大佛 · 修缮中</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-head"><div class="dot"></div><h3>DAY 5 · 峨眉山 · 雾里有猴</h3><div class="date">Oct 17, 2023</div></div>
+      <p>峨眉山的雾是真的浓，能见度十米，前一秒还看得见树梢，后一秒整片山就退回到一张空白宣纸里。半山遇到一只藏酋猴，毛厚得像穿了三件棉袄，蹲在木栏上端详我，比我端详它要从容。下午下到夹江一带，能见度才稍微好转。</p>
+      <div class="grid g2">
+        <figure class="tall"><img loading="lazy" data-full="images/full/IMG_5375.jpg" src="images/thumb/IMG_5375.jpg" alt=""><figcaption>峨眉山 · 藏酋猴</figcaption></figure>
+        <figure class="tall"><img loading="lazy" data-full="images/full/IMG_5381.jpg" src="images/thumb/IMG_5381.jpg" alt=""><figcaption>下山途中</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="pull">"江水清浅时，浮屠也成倒影。"</div>
+
+    <div class="day">
+      <div class="day-head"><div class="dot"></div><h3>DAY 6–7 · 重庆 · 把江岸点亮</h3><div class="date">Oct 18 — 19, 2023</div></div>
+      <p>从蜀中翻山到重庆，城市突然立起来了——楼立起来，人立起来，连路也立起来。傍晚六点半，洪崖洞的吊脚楼开始亮灯，金黄一层一层垒上去，倒影泡在嘉陵江里。第二天去了磁器口，老街石板被人脚磨得发亮，街尾一家烤鱼馆，鱼用石板托着出锅，下面的炭还在响。</p>
+      <div class="grid g1">
+        <figure class="wide"><img loading="lazy" data-full="images/full/IMG_5397.jpg" src="images/thumb/IMG_5397.jpg" alt=""><figcaption>洪崖洞 · 黄昏点灯</figcaption></figure>
+      </div>
+      <div class="grid g2">
+        <figure><img loading="lazy" data-full="images/full/IMG_5403.jpg" src="images/thumb/IMG_5403.jpg" alt=""><figcaption>磁器口</figcaption></figure>
+        <figure><img loading="lazy" data-full="images/full/IMG_5408.jpg" src="images/thumb/IMG_5408.jpg" alt=""><figcaption>石板烤鱼</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trip">
+  <div class="wrap">
+    <div class="trip-head">
+      <div class="num">II</div>
+      <h2>滇 行 一 周</h2>
+    </div>
+    <div class="trip-meta">2024.10.18 — 2024.10.24 · 武汉 · 丽江 · 玉龙雪山 · 大理 · 西双版纳</div>
+    <p class="intro">一年之后，又是十月。这次先在武汉停一脚，再一路向西南——丽江的水巷、玉龙雪山的雪线、大理的风、西双版纳潮湿的夜，最后在中科院的热带植物园里把整段旅程收尾。海拔从负数（江汉平原）一路爬到雪山脚下，又下到接近赤道的雨林，像在一周之内换了三个季节。</p>
+
+    <div class="day">
+      <div class="day-head"><div class="dot"></div><h3>DAY 1 · 武汉中转</h3><div class="date">Oct 18, 2024</div></div>
+      <p>清晨在江汉关附近坐了趟轮渡，长江把城市切成两半，远处的天际线还在长——塔吊还没拆。晌午吃一锅莲藕排骨汤，瓦罐厚重，藕段粉糯到一筷子断三截，是武汉的一种气定神闲。</p>
+      <div class="grid g3">
+        <figure><img loading="lazy" data-full="images/full/IMG_6079.jpg" src="images/thumb/IMG_6079.jpg" alt=""><figcaption>长江轮渡码头</figcaption></figure>
+        <figure><img loading="lazy" data-full="images/full/IMG_6081.jpg" src="images/thumb/IMG_6081.jpg" alt=""><figcaption>江边</figcaption></figure>
+        <figure><img loading="lazy" data-full="images/full/IMG_6086.jpg" src="images/thumb/IMG_6086.jpg" alt=""><figcaption>莲藕排骨汤</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-head"><div class="dot"></div><h3>DAY 2 · 丽江古城</h3><div class="date">Oct 19, 2024</div></div>
+      <p>从武汉飞过去，落地的那一刻空气是脆的——海拔两千四的脆。古城的水是顺着青石巷一路淌的，每条巷子尽头都有一座小石桥，桥下小鱼并不怕人。傍晚的酒馆已经亮起灯，但白天的丽江属于猫和晾衣绳。</p>
+      <div class="grid g2">
+        <figure class="tall"><img loading="lazy" data-full="images/full/IMG_6096.jpg" src="images/thumb/IMG_6096.jpg" alt=""><figcaption>古城水巷 · 09:31</figcaption></figure>
+        <figure class="tall"><img loading="lazy" data-full="images/full/IMG_6110.jpg" src="images/thumb/IMG_6110.jpg" alt=""><figcaption>傍晚的灯火</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-head"><div class="dot"></div><h3>DAY 3 · 玉龙雪山 · 蓝月谷</h3><div class="date">Oct 20, 2024</div></div>
+      <p>清晨进山，云在山尖上像哈达一样反复缠绕，主峰一忽儿露出来，一忽儿又被吃掉。中午到蓝月谷，水从雪山化下来，落到一道道半月形的白水台上，颜色绿得不真实——是那种你想用手指戳一戳确认是不是颜料的绿。傍晚从山区一路开到大理，海拔降下来，温度也终于不咬人了。落座先点一盘见手青——云南人对野生菌的偏爱，是要冒一点险的，干辣椒和青蒜在油里同炒，菌肉厚实，鲜得发甜。</p>
+      <div class="grid g1">
+        <figure class="wide"><img loading="lazy" data-full="images/full/IMG_6112.jpg" src="images/thumb/IMG_6112.jpg" alt=""><figcaption>玉龙雪山主峰 · 云缠</figcaption></figure>
+      </div>
+      <div class="grid g2">
+        <figure class="wide"><img loading="lazy" data-full="images/full/IMG_6129.jpg" src="images/thumb/IMG_6129.jpg" alt=""><figcaption>蓝月谷 · 白水台</figcaption></figure>
+        <figure class="wide"><img loading="lazy" data-full="images/full/IMG_6131.jpg" src="images/thumb/IMG_6131.jpg" alt=""><figcaption>层层叠落</figcaption></figure>
+      </div>
+      <div class="grid g1">
+        <figure class="wide"><img loading="lazy" data-full="images/full/IMG_6133.jpg" src="images/thumb/IMG_6133.jpg" alt=""><figcaption>抵达大理 · 一盘见手青</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-head"><div class="dot"></div><h3>DAY 4 · 大理 · 三塔与洱海风</h3><div class="date">Oct 21, 2024</div></div>
+      <p>大理是适合慢的。早上去崇圣寺看三塔，主塔笔直立在云下，砖缝里的草都长得有规矩。中午一碗饵丝填胃。下午沿洱海走栈道，风从苍山方向横扫过来，吹得头发不愿意停在原地，远处有人在拍婚纱，海鸥跟船。</p>
+      <div class="grid g3">
+        <figure class="tall"><img loading="lazy" data-full="images/full/IMG_6138.jpg" src="images/thumb/IMG_6138.jpg" alt=""><figcaption>大理古城</figcaption></figure>
+        <figure class="tall"><img loading="lazy" data-full="images/full/IMG_6144.jpg" src="images/thumb/IMG_6144.jpg" alt=""><figcaption>崇圣寺三塔</figcaption></figure>
+        <figure class="tall"><img loading="lazy" data-full="images/full/IMG_6150.jpg" src="images/thumb/IMG_6150.jpg" alt=""><figcaption>洱海栈道</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-head"><div class="dot"></div><h3>DAY 5 · 西双版纳 · 告庄夜色</h3><div class="date">Oct 23, 2024</div></div>
+      <p>从苍山脚下飞到澜沧江边，气温一下子从十几度跳到三十度，湿度也跟着上来——空气里全是椰子和柠檬叶子的味道。傍晚去告庄西双景，金顶塔群在夜色里灯火通明，像一座专为夜晚而生的城。夜市从八点钟一直热闹到接近午夜，烤罗非鱼的炭香、菠萝饭的甜、傣味手抓饭的辣，全是被赤道宠坏的味道。</p>
+      <div class="grid g2">
+        <figure class="wide"><img loading="lazy" data-full="images/full/IMG_6167.jpg" src="images/thumb/IMG_6167.jpg" alt=""><figcaption>傣寨村口</figcaption></figure>
+        <figure class="wide"><img loading="lazy" data-full="images/full/IMG_6172.jpg" src="images/thumb/IMG_6172.jpg" alt=""><figcaption>午后</figcaption></figure>
+      </div>
+      <div class="grid g1">
+        <figure class="wide"><img loading="lazy" data-full="images/full/IMG_6177.jpg" src="images/thumb/IMG_6177.jpg" alt=""><figcaption>傍晚的雨林边</figcaption></figure>
+      </div>
+      <div class="grid g2">
+        <figure><img loading="lazy" data-full="images/full/IMG_6184.jpg" src="images/thumb/IMG_6184.jpg" alt=""><figcaption>告庄 · 大金塔夜景</figcaption></figure>
+        <figure><img loading="lazy" data-full="images/full/IMG_6187.jpg" src="images/thumb/IMG_6187.jpg" alt=""><figcaption>夜市 · 22点</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-head"><div class="dot"></div><h3>DAY 6 · 中科院西双版纳热带植物园</h3><div class="date">Oct 24, 2024</div></div>
+      <p>勐仑的植物园是给整段滇行的句号。睡莲铺满半个池塘，粉的白的开了一池；草坪那一带，柚木和棕榈一棵棵立在午后阳光里，云压得很低，但雨没下下来。一个小时也走不完一区，留到下次。</p>
+      <div class="grid g2">
+        <figure class="tall"><img loading="lazy" data-full="images/full/IMG_6192.jpg" src="images/thumb/IMG_6192.jpg" alt=""><figcaption>睡莲池</figcaption></figure>
+        <figure class="tall"><img loading="lazy" data-full="images/full/IMG_6202.jpg" src="images/thumb/IMG_6202.jpg" alt=""><figcaption>柚木林草坪</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trip">
+  <div class="wrap">
+    <div class="trip-head">
+      <div class="num">III</div>
+      <h2>江 南 早 春</h2>
+    </div>
+    <div class="trip-meta">2026.02.17 — 2026.02.18 · 园林 · 早梅</div>
+    <p class="intro">两张近照，落在早春。江南的二月还冷，但已经禁不住了——梅花一枝先开出来，假山间的人也比想象中多。前两次旅行往大山大江里走，这次只是在园子里慢慢踱了两天，节奏完全不同。</p>
+
+    <div class="grid g2">
+      <figure class="tall"><img loading="lazy" data-full="images/full/IMG_9874.jpg" src="images/thumb/IMG_9874.jpg" alt=""><figcaption>园林假山 · Feb 17</figcaption></figure>
+      <figure class="tall"><img loading="lazy" data-full="images/full/f774258fd1898db4c2fbf7ade810f468.jpg" src="images/thumb/f774258fd1898db4c2fbf7ade810f468.jpg" alt=""><figcaption>湖畔早梅 · Feb 18</figcaption></figure>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-style:italic;margin-top:30px">"一枝先发，便是春。"</p>
+  </div>
+</section>
+
+<footer>
+  <div class="seal">三 程 · 三 十 九 帧</div>
+  <div>2023 秋 — 2026 春 · 据相机时间与定位整理</div>
+</footer>
+
+<div class="lb" id="lb"><img id="lbi" alt=""><div class="cap" id="lbc"></div></div>
+
+<script>
+(function(){
+  const lb = document.getElementById('lb');
+  const lbi = document.getElementById('lbi');
+  const lbc = document.getElementById('lbc');
+  document.querySelectorAll('.grid figure').forEach(fig => {
+    fig.addEventListener('click', () => {
+      const img = fig.querySelector('img');
+      const cap = fig.querySelector('figcaption');
+      lbi.src = img.dataset.full || img.src;
+      lbc.textContent = cap ? cap.textContent : '';
+      lb.classList.add('on');
+    });
+  });
+  lb.addEventListener('click', () => lb.classList.remove('on'));
+  document.addEventListener('keydown', e => { if(e.key==='Escape') lb.classList.remove('on'); });
+})();
+</script>
+
+</body>
+</html>
